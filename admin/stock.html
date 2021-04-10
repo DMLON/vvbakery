@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Vivi Velvet Bakery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script>
+        function openNavBar() {
+            var x = document.getElementById("nav-bar");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <!-- Imagen con Logo -->
+        <div class="left-header">
+            <a href="../index.html">
+                <img src="../media/Fondo Red VelvetMini.png" alt="Vivi Velvet Bakery Logo" />
+            </a>
+            <h2 id="nombre-logo"><i>Vivi Velvet Bakery</i></h2>
+            <input size="50" placeholder="🔎 ¿Que vas a merendar hoy?" />
+        </div>
+        <div class="right-header flex-row flex-center">
+            <div id="nav-bar" class="topnav">
+                <a class="first-item" href="../index.html"">Home</a>
+                    <a href=" ../quienes.html">Quienes somos</a> <a href="../contacto.html">Contacto</a>
+                <a href="../login.html">Acceder</a>
+                <a class="active" href="admin-dashboard.html">Admin</a>
+                <a class="nav-icon" onclick="openNavBar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <div class="carrito-group">
+                <a href="../carrito.html">
+                    <!-- Carrito -->
+                    <div class="product-numbers">
+                        <span>2 Productos</span>
+                        <span>$xxx.xx</span>
+                    </div>
+                    <!-- El carrito tiene link hacia la pagina del carrito -->
+                    <img id="logo-carrito" src="../media/Carrito.png" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="stock-grid-container">
+            <div class="navigation flex-col flex-center-top border flex-stretch">
+                <h1 class="navigation__header center-text">NAVIGATION</h1>
+                <a class="navigation__link" href="./admin-dashboard.html">
+                    <span class="iconify navigation__icon" data-icon="la:home" data-inline="true"></span>
+                    <span class="navigation__text">Main</span>
+                </a>
+                <a class="navigation__link active" href="./stock.html">
+                    <span class="iconify navigation__icon" data-icon="la:store-alt" data-inline="true"></span>
+                    <span class="navigation__text">Stock</span>
+                </a>
+                <a class="navigation__link" href="./stock.html">
+                    <span class="iconify navigation__icon" data-icon="la:store-alt" data-inline="true"></span>
+                    <span class="navigation__text">Stock</span>
+                </a>
+            </div>
+
+            <section id="stock-main">
+                <div class="panel">
+                    <div class="widget-panel">
+                        <span class="iconify widget-logo" data-icon="la:dolly" data-inline="true"></span>
+                        <h1 class="widget-header">Stock Insumos</h1>
+                    </div>
+                    <div class="CRUD-buttons flex-row space-around flex-wrap">
+                        <!-- Agregar permite cambiar los datos de descripcion insumo (que está
+                            como read only actualmente y agrega un item a la tabla) -->
+                        <button class="pill CRUD-buttons__agregar">Agregar</button>
+                        <!-- Quitar elimina el elemento seleccionado en la tabla -->
+                        <button class="pill CRUD-buttons__quitar">Quitar</button>
+                        <!-- Modificar permite cambiar los datos de un elemento seleccionado -->
+                        <button class="pill CRUD-buttons__modificar">Modificar</button>
+                    </div>
+                    <table id="stock-table" class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Costo</th>
+                                <th>Cantidad</th>
+                                <th>Unidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Leche</td>
+                                <td>$50.00</td>
+                                <td>3</td>
+                                <td>Litros</td>
+                            </tr>
+                            <tr>
+                                <td>Harina</td>
+                                <td>$50.00</td>
+                                <td>10</td>
+                                <td>Kilos</td>
+                            </tr>
+                            <tr>
+                                <td>Limón</td>
+                                <td>$10.00</td>
+                                <td>25</td>
+                                <td>Unidades</td>
+                            </tr>
+                            <tr>
+                                <td>Leche</td>
+                                <td>$50.00</td>
+                                <td>3</td>
+                                <td>Litros</td>
+                            </tr>
+                            <tr>
+                                <td>Harina</td>
+                                <td>$50.00</td>
+                                <td>10</td>
+                                <td>Kilos</td>
+                            </tr>
+                            <tr>
+                                <td>Limón</td>
+                                <td>$10.00</td>
+                                <td>25</td>
+                                <td>Unidades</td>
+                            </tr>
+                            <tr>
+                                <td>Leche</td>
+                                <td>$50.00</td>
+                                <td>3</td>
+                                <td>Litros</td>
+                            </tr>
+                            <tr>
+                                <td>Harina</td>
+                                <td>$50.00</td>
+                                <td>10</td>
+                                <td>Kilos</td>
+                            </tr>
+                            <tr>
+                                <td>Limón</td>
+                                <td>$10.00</td>
+                                <td>25</td>
+                                <td>Unidades</td>
+                            </tr>
+                            <tr>
+                                <td>Leche</td>
+                                <td>$50.00</td>
+                                <td>3</td>
+                                <td>Litros</td>
+                            </tr>
+                            <tr>
+                                <td>Harina</td>
+                                <td>$50.00</td>
+                                <td>10</td>
+                                <td>Kilos</td>
+                            </tr>
+                            <tr>
+                                <td>Limón</td>
+                                <td>$10.00</td>
+                                <td>25</td>
+                                <td>Unidades</td>
+                            </tr>
+                            <tr>
+                                <td>Leche</td>
+                                <td>$50.00</td>
+                                <td>3</td>
+                                <td>Litros</td>
+                            </tr>
+                            <tr>
+                                <td>Harina</td>
+                                <td>$50.00</td>
+                                <td>10</td>
+                                <td>Kilos</td>
+                            </tr>
+                            <tr>
+                                <td>Limón</td>
+                                <td>$10.00</td>
+                                <td>25</td>
+                                <td>Unidades</td>
+                            </tr>
+                            <tr>
+                                <td>Leche</td>
+                                <td>$50.00</td>
+                                <td>3</td>
+                                <td>Litros</td>
+                            </tr>
+                            <tr>
+                                <td>Harina</td>
+                                <td>$50.00</td>
+                                <td>10</td>
+                                <td>Kilos</td>
+                            </tr>
+                            <tr>
+                                <td>Limón</td>
+                                <td>$10.00</td>
+                                <td>25</td>
+                                <td>Unidades</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <!-- Al hacer click en cada elemento de la tabla actualiza los datos de details -->
+            <section id="stock-details">
+                <div class="panel">
+                    <div class="widget-panel">
+                        <span class="iconify widget-logo" data-icon="la:dolly" data-inline="true"></span>
+                        <h1 class="widget-header">Descripción Insumo</h1>
+                    </div>
+                    <div class="flex-row flex-wrap flex-center">
+                        <div class="label-input flex-grow">
+                            <label class="wide block" for="nombre">Nombre del Insumo</label>
+                            <input class="tall wide" type="text" name="nombre" id="nombre" placeholder="Leche"
+                                readonly />
+                        </div>
+
+                        <div class="label-input flex-grow">
+                            <label class="wide block" for="descripcion">Descripción</label>
+                            <input class="tall wide" type="text" name="descripcion" id="descripcion"
+                                placeholder="Lorem Ipsum" readonly />
+                        </div>
+
+                        <div class="label-input flex-grow">
+                            <label class="wide block" for="costo">Costo</label>
+                            <input class="tall wide" type="text" name="costo" id="costo" placeholder="$50.00"
+                                readonly />
+                        </div>
+                        <div class="label-input flex-grow">
+                            <label class="wide block" for="vendedor">
+                                Vendedor</label>
+                            <input class="tall wide" type="text" name="costo" id="costo" placeholder="La Serenisima"
+                                readonly />
+                        </div>
+
+                        <div class="label-input flex-grow">
+                            <label class="wide block" for="cantidad">
+                                Cantidad Actual</label>
+                            <input class="tall wide" type="text" name="cantidad" id="cantidad" placeholder="3"
+                                readonly />
+                        </div>
+
+                        <div class="label-input flex-grow">
+                            <label class="wide block" for="unidad">Unidad</label>
+                            <select class="tall wide" name="unidad" id="unidad">
+                                <option value="kilos">Kilos</option>
+                                <option value="litros">Litros</option>
+                                <option value="unidades">Unidades</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

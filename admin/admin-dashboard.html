@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Vivi Velvet Bakery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let datos = new Array(30).fill(0);
+            datos = datos.map((val, idx) => {
+                return Math.ceil(
+                    1000 +
+                    500 * Math.sin(((2 * Math.PI) / 10) * idx) +
+                    400 * Math.sin(((2 * Math.PI) / 5) * idx)
+                );
+            });
+
+            let labels = new Array(30).fill(0);
+            labels = labels.map((val, idx) => {
+                return `${idx + 1}/03`;
+            });
+
+            let ctx = document
+                .getElementById("chart-ganancias")
+                .getContext("2d");
+            let myChart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: "Ventas en Pesos",
+                        data: datos,
+                        backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+                        borderColor: ["rgba(255, 99, 132, 1)"],
+                        borderWidth: 1,
+                    }, ],
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                            },
+                        }, ],
+                    },
+                },
+            });
+        });
+    </script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script>
+        function openNavBar() {
+            var x = document.getElementById("nav-bar");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <!-- Imagen con Logo -->
+        <div class="left-header">
+            <a href="../index.html">
+                <img src="../media/Fondo Red VelvetMini.png" alt="Vivi Velvet Bakery Logo" />
+            </a>
+            <h2 id="nombre-logo"><i>Vivi Velvet Bakery</i></h2>
+            <input size="50" placeholder="🔎 ¿Que vas a merendar hoy?" />
+        </div>
+        <div class="right-header flex-row flex-center">
+            <div id="nav-bar" class="topnav">
+                <a class="first-item" href="../index.html">Home</a>
+                <a href="../quienes.html">Quienes somos</a>
+                <a href="../contacto.html">Contacto</a>
+                <a href="../login.html">Acceder</a>
+                <a class="active" href="admin-dashboard.html">Admin</a>
+                <a class="nav-icon" onclick="openNavBar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <div class="carrito-group">
+                <a href="../carrito.html">
+                    <!-- Carrito -->
+                    <div class="product-numbers">
+                        <span>2 Productos</span>
+                        <span>$xxx.xx</span>
+                    </div>
+                    <!-- El carrito tiene link hacia la pagina del carrito -->
+                    <img id="logo-carrito" src="../media/Carrito.png" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="admin-grid-container">
+            <div class="navigation flex-col flex-center-top border flex-stretch">
+                <h1 class="navigation__header center-text">NAVIGATION</h1>
+                <a class="navigation__link active" href="#">
+                    <span class="iconify navigation__icon" data-icon="la:home" data-inline="true"></span>
+                    <span class="navigation__text">Main</span>
+                </a>
+                <a class="navigation__link" href="./stock.html">
+                    <span class="iconify navigation__icon" data-icon="la:store-alt" data-inline="true"></span>
+                    <span class="navigation__text">Stock</span>
+                </a>
+                <a class="navigation__link" href="./stock.html">
+                    <span class="iconify navigation__icon" data-icon="la:store-alt" data-inline="true"></span>
+                    <span class="navigation__text">Stock</span>
+                </a>
+            </div>
+
+            <div class="news">
+                <div class="news-item background-red">
+                    <span class="iconify news-item__icon" data-icon="uim:bag" data-inline="true"></span>
+                    <h1 class="news-item__header1 news-item_header">30</h1>
+                    <h2 class="news-item__header2 news-item_header">
+                        Nuevas Ventas
+                    </h2>
+                </div>
+                <div class="news-item background-cyan">
+                    <span class="iconify news-item__icon" data-icon="la:user" data-inline="true"></span>
+                    <h1 class="news-item__header1 news-item_header">10</h1>
+                    <h2 class="news-item__header2 news-item_header">
+                        Nuevos Usuarios
+                    </h2>
+                </div>
+                <div class="news-item background-yellow">
+                    <span class="iconify news-item__icon" data-icon="uim:bag" data-inline="true"></span>
+                    <h1 class="news-item__header1 news-item_header">30</h1>
+                    <h2 class="news-item__header2 news-item_header">
+                        Nuevas Ventas
+                    </h2>
+                </div>
+
+                <div class="news-item background-green">
+                    <span class="iconify news-item__icon" data-icon="uim:bag" data-inline="true"></span>
+                    <h1 class="news-item__header1 news-item_header">30</h1>
+                    <h2 class="news-item__header2 news-item_header">
+                        Nuevas Ventas
+                    </h2>
+                </div>
+            </div>
+
+            <div class="reporte-ganancias panel">
+                <div class="widget-panel">
+                    <span class="iconify widget-logo" data-icon="la:file-invoice-dollar" data-inline="true"></span>
+                    <h1 class="widget-header">Ganancias</h1>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="chart-ganancias"></canvas>
+                </div>
+            </div>
+
+            <div class="reporte-ventas panel">
+                <div class="widget-panel">
+                    <span class="iconify widget-logo" data-icon="la:file-invoice-dollar" data-inline="true"></span>
+                    <h1 class="widget-header">Ventas</h1>
+                </div>
+                <table id="stock-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Ganancia</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan</td>
+                            <td>$50.00</td>
+                            <td>En progreso</td>
+                        </tr>
+                        <tr>
+                            <td>Juan</td>
+                            <td>$50.00</td>
+                            <td>En progreso</td>
+                        </tr>
+                        <tr>
+                            <td>Juan</td>
+                            <td>$50.00</td>
+                            <td>En progreso</td>
+                        </tr>
+                        <tr>
+                            <td>Juan</td>
+                            <td>$50.00</td>
+                            <td>En progreso</td>
+                        </tr>
+                        <tr>
+                            <td>Juan</td>
+                            <td>$50.00</td>
+                            <td>En progreso</td>
+                        </tr>
+                        <tr>
+                            <td>Juan</td>
+                            <td>$50.00</td>
+                            <td>En progreso</td>
+                        </tr>
+                        <tr>
+                            <td>Juan</td>
+                            <td>$50.00</td>
+                            <td>En progreso</td>
+                        </tr>
+                        <tr>
+                            <td>Juan</td>
+                            <td>$50.00</td>
+                            <td>En progreso</td>
+                        </tr>
+                        <tr>
+                            <td>Juan</td>
+                            <td>$50.00</td>
+                            <td>En progreso</td>
+                        </tr>
+                        <tr>
+                            <td>Juan</td>
+                            <td>$50.00</td>
+                            <td>En progreso</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="reporte-visitas panel">
+                <div class="widget-panel">
+                    <span class="iconify widget-logo" data-icon="la:globe" data-inline="true"></span>
+                    <h1 class="widget-header">Visitas</h1>
+                </div>
+                <!-- 
+                    Estoy teniendo problemas al poner la imagen, al situarla
+                    Lo que pasa es que todas las filas del grid layout se estira, me imagino
+                    Que está asociado a que tienen la medida en fraccion (fr), hay alguna solucion para que sea
+                    Adaptativo y que solo se ajuste el tamaño del panel de visitas sin cambiar los otros?
+                    No me gustaría ponerle valor fijo de pixeles -->
+                <!-- <img src="../media/World_location_map_mono.svg"> -->
+            </div>
+
+            <div class="reporte-stock panel"></div>
+
+            <div class="reporte-mensajes panel">
+
+            </div>
+
+            <div class="calendario panel">
+                <div class="widget-panel">
+                    <span class="iconify widget-logo" data-icon="la-calendar" data-inline="true"></span>
+                    <h1 class="widget-header">Calendario</h1>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

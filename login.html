@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0" />
+        <title>Vivi Velvet Bakery</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            function openNavBar() {
+                var x = document.getElementById("nav-bar");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <!-- Imagen con Logo -->
+            <div class="left-header">
+                <a href="index.html">
+                    <img
+                        src="./media/Fondo Red VelvetMini.png"
+                        alt="Vivi Velvet Bakery Logo"
+                    />
+                </a>
+                <h2 id="nombre-logo"><i>Vivi Velvet Bakery</i></h2>
+                <input size="50" placeholder="🔎 ¿Que vas a merendar hoy?" />
+            </div>
+            <div class="right-header flex-row flex-center">
+                <div id="nav-bar" class="topnav">
+                    <a class="first-item" href="index.html">Home</a>
+                    <a href="quienes.html">Quienes somos</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a class="active" href="login.html">Acceder</a>
+                    <a href="./admin/admin-dashboard.html">Admin</a>
+                    <a class="nav-icon" onclick="openNavBar()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <div class="carrito-group">
+                    <a href="carrito.html">
+                        <!-- Carrito -->
+                        <div class="product-numbers">
+                            <span>2 Productos</span>
+                            <span>$xxx.xx</span>
+                        </div>
+                        <!-- El carrito tiene link hacia la pagina del carrito -->
+                        <img id="logo-carrito" src="./media/Carrito.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <form>
+                <!-- Idealmente acá tendría una imagen como está en el mockup
+                    Me faltaría ver como darle opacidad a la imagen -->
+                <div class="right-form">
+                    <h1>Acceder</h1>
+                    <section>
+                        <div class="label-input stacked">
+                            <label class="wide block" for="email">Email</label>
+                            <input
+                                class="wide tall black-on-white"
+                                type="text"
+                                name="email"
+                                id="email"
+                                placeholder="Email..."
+                            />
+                        </div>
+                        <div class="label-input stacked">
+                            <label class="wide block" for="password">Contraseña</label>
+                            <input
+                                class="wide tall black-on-white"
+                                type="password"
+                                name="password"
+                                id="password"
+                                placeholder=""
+                            />
+                        </div>
+                        <a class="register-link" href="registro.html">No tenés cuenta? <span class="underline">Registrate!</span></a>
+                    </section>
+                    <div class="label-input stacked">
+                        <input class="button-submit block " type="submit" value="Acceder">
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="tarjetas-envio">
+                    <!-- Tarjetas y envio -->
+                    <div class="center-scale-text-image">
+                        <b>Aceptamos tarjetas y mercado pago</b>
+                        <img src="./media/logo_mastervisa.png" width="75px">
+                        <img src="./media/logo_mercadoPago.png" width="75px">
+                    </div>
+                    <div class="center-scale-text-image">
+                        <b>Envios gratis desde $xxxx.xx</b>
+                        <!-- El helper permite que se centre el camion -->
+                        <div class="helper">
+                            <img src="./media/logo_delivery.png">
+                        </div>
+                    </div>
+                    <span id="copyright">Copyright © 2020-2021 <em>Vivi Velvet Bakery</em></span>
+                </div>
+                <div class="social">
+                    <!-- News y redes -->
+                    <div class="center-scale-text-image news-redes">
+                        <!-- Redes sociales -->
+                        <span>No te pierdas las últimas novedades!</span>
+                        <button class="social-button" id="twitter-button">Twitter</button>
+                        <button class="social-button" id="facebook-button">Facebook</button>
+                        <a href="https://www.instagram.com/vivivelvetbakery/">
+                            <button class="social-button" id="instagram-button">Instagram</button>
+                        </a>
+                        
+                    </div>
+                    <div class="center-scale-text-image" id="newsletter">
+                        <!-- Newsletter -->
+                        <span>Suscribite a nuestro newsletter</span>
+                        <input size="30" placeholder="🗞️ Ingresa tu mail" />
+                        <button>Suscribirse</button>
+                    </div>
+                    <div id="legales" class="center-scale-text-image">
+                        <!-- Legales -->
+                        <a href="#">Terminos y servicios</a>
+                        |
+                        <a href="#">Politica de privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

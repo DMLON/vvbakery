@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0" />
+        <title>Vivi Velvet Bakery</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                new Splide(".splide", {
+                    type: "fade",
+                    rewind: true,
+                }).mount();
+            });
+        </script>
+        <script>
+            function openNavBar() {
+                var x = document.getElementById("nav-bar");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <!-- Imagen con Logo -->
+            <div class="left-header">
+                <a href="index.html">
+                    <img
+                        src="./media/Fondo Red VelvetMini.png"
+                        alt="Vivi Velvet Bakery Logo"
+                    />
+                </a>
+                <h2 id="nombre-logo"><i>Vivi Velvet Bakery</i></h2>
+                <input size="50" placeholder="🔎 ¿Que vas a merendar hoy?" />
+            </div>
+            <div class="right-header flex-row flex-center">
+                <div id="nav-bar" class="topnav">
+                    <a class="first-item" href="index.html">Home</a>
+                    <a href="quienes.html">Quienes somos</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a class="active" href="login.html">Acceder</a>
+                    <a href="./admin/admin-dashboard.html">Admin</a>
+                    <a class="nav-icon" onclick="openNavBar()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <div class="carrito-group">
+                    <a href="carrito.html">
+                        <!-- Carrito -->
+                        <div class="product-numbers">
+                            <span>2 Productos</span>
+                            <span>$xxx.xx</span>
+                        </div>
+                        <!-- El carrito tiene link hacia la pagina del carrito -->
+                        <img id="logo-carrito" src="./media/Carrito.png" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <h1>Registrarse</h1>
+            <section>
+                <h2>Datos de Usuario</h2>
+                <div class="label-input">
+                    <label class="wide block" for="nombre"
+                        >Nombre Completo</label
+                    >
+                    <input
+                        class="tall wide"
+                        type="text"
+                        name="nombre"
+                        id="nombre"
+                        placeholder="Nombre..."
+                    />
+                </div>
+                <div class="label-input">
+                    <label class="wide block" for="contraseña"
+                        >Contraseña</label
+                    >
+                    <input
+                        class="tall wide"
+                        type="password"
+                        name="contraseña"
+                        id="contraseña"
+                        placeholder="Contraseña..."
+                    />
+                </div>
+                <div class="label-input">
+                    <label class="wide block" for="email">Email</label>
+                    <input
+                        class="tall wide"
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="Email..."
+                    />
+                </div>
+                <div class="label-input">
+                    <label class="wide block" for="contraseña2"
+                        >Repetir Contraseña</label
+                    >
+                    <input
+                        class="tall wide"
+                        type="password"
+                        name="contraseña2"
+                        id="contraseña2"
+                        placeholder="Contraseña..."
+                    />
+                </div>
+                <div class="label-input">
+                    <label class="wide block" for="fechanac"
+                        >Fecha de Nacimiento</label
+                    >
+                    <input
+                        class="tall wide"
+                        type="datetime"
+                        name="fechanac"
+                        id="fechanac"
+                    />
+                </div>
+                <div class="label-input">
+                    <label class="wide block" for="telefono">Teléfono</label>
+                    <input
+                        class="tall wide"
+                        type="text"
+                        name="telefono"
+                        id="telefono"
+                        placeholder="Telefono..."
+                    />
+                </div>
+            </section>
+            <section>
+                <h2>Datos de Envio</h2>
+                <div class="label-input">
+                    <label class="wide block" for="localidad">Localidad</label>
+                    <input
+                        class="tall wide"
+                        type="text"
+                        name="localidad"
+                        id="localidad"
+                        placeholder="Localidad..."
+                    />
+                </div>
+                <div class="label-input">
+                    <label class="wide block" for="codpostal"
+                        >Codigo Postal</label
+                    >
+                    <input
+                        class="tall wide"
+                        type="text"
+                        name="codpostal"
+                        id="codpostal"
+                        placeholder="codpostal..."
+                    />
+                </div>
+                <div class="label-input">
+                    <label class="wide block" for="calle">Calle</label>
+                    <input
+                        class="tall wide"
+                        type="text"
+                        name="calle"
+                        id="calle"
+                        placeholder="Calle..."
+                    />
+                </div>
+                <div class="label-input">
+                    <label class="wide block" for="numero">Nº</label>
+                    <input
+                        class="tall wide"
+                        type="text"
+                        name="numero"
+                        id="numero"
+                    />
+                </div>
+                <div class="label-input">
+                    <label class="wide block" for="piso">Piso</label>
+                    <input
+                        class="tall wide"
+                        type="text"
+                        name="piso"
+                        id="piso"
+                        placeholder="Piso..."
+                    />
+                </div>
+                <div class="label-input">
+                    <label class="wide block" for="departamento"
+                        >Departamento</label
+                    >
+                    <input
+                        class="tall wide"
+                        type="text"
+                        name="departamento"
+                        id="departamento"
+                        placeholder="Departamento..."
+                    />
+                </div>
+            </section>
+
+            <section>
+                <div class="label-input">
+                    <input
+                        class="checkbox"
+                        type="checkbox"
+                        name="novedades"
+                        id="novedades"
+                    />
+                    <label class="checkbox block" for="novedades"
+                        >Deseo recibir novedades y promociones
+                    </label>
+                </div>
+            </section>
+
+            <div id="reset-submit">
+                <input
+                    class="button-clear"
+                    type="reset"
+                    value="Limpiar Campos"
+                />
+                <input
+                    class="button-submit"
+                    type="submit"
+                    value="Registrarse"
+                />
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="tarjetas-envio">
+                    <!-- Tarjetas y envio -->
+                    <div class="center-scale-text-image">
+                        <b>Aceptamos tarjetas y mercado pago</b>
+                        <img src="./media/logo_mastervisa.png" width="75px" />
+                        <img src="./media/logo_mercadoPago.png" width="75px" />
+                    </div>
+                    <div class="center-scale-text-image">
+                        <b>Envios gratis desde $xxxx.xx</b>
+                        <!-- El helper permite que se centre el camion -->
+                        <div class="helper">
+                            <img src="./media/logo_delivery.png" />
+                        </div>
+                    </div>
+                    <span id="copyright"
+                        >Copyright © 2020-2021 <em>Vivi Velvet Bakery</em></span
+                    >
+                </div>
+                <div class="social">
+                    <!-- News y redes -->
+                    <div class="center-scale-text-image news-redes">
+                        <!-- Redes sociales -->
+                        <span>No te pierdas las últimas novedades!</span>
+                        <button class="social-button" id="twitter-button">
+                            Twitter
+                        </button>
+                        <button class="social-button" id="facebook-button">
+                            Facebook
+                        </button>
+                        <a href="https://www.instagram.com/vivivelvetbakery/">
+                            <button class="social-button" id="instagram-button">
+                                Instagram
+                            </button>
+                        </a>
+                    </div>
+                    <div class="center-scale-text-image" id="newsletter">
+                        <!-- Newsletter -->
+                        <span>Suscribite a nuestro newsletter</span>
+                        <input size="30" placeholder="🗞️ Ingresa tu mail" />
+                        <button>Suscribirse</button>
+                    </div>
+                    <div id="legales" class="center-scale-text-image">
+                        <!-- Legales -->
+                        <a href="#">Terminos y servicios</a>
+                        |
+                        <a href="#">Politica de privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
