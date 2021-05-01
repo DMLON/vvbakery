@@ -21,6 +21,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
+        <script type="module" src="./assets/js/starter.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 new Splide(".splide", {
@@ -283,7 +284,7 @@
                                 <span class="producto__texto producto__precio"
                                     >$xxx.xx</span
                                 >
-                                <button class="button-submit">+</button>
+                                <button class="button-submit" data-toggle="modal" data-target="#modalCarrito">+</button>
                             </div>
                         </article>
 
@@ -299,7 +300,7 @@
                                 <span class="producto__texto producto__precio"
                                     >$xxx.xx</span
                                 >
-                                <button class="button-submit">+</button>
+                                <button class="button-submit" data-toggle="modal" data-target="#modalCarrito">+</button>
                             </div>
                         </article>
 
@@ -317,7 +318,7 @@
                                 <span class="producto__texto producto__precio"
                                     >$xxx.xx</span
                                 >
-                                <button class="button-submit">+</button>
+                                <button class="button-submit" data-toggle="modal" data-target="#modalCarrito">+</button>
                             </div>
                         </article>
 
@@ -335,7 +336,7 @@
                                 <span class="producto__texto producto__precio"
                                     >$xxx.xx</span
                                 >
-                                <button class="button-submit">+</button>
+                                <button class="button-submit" data-toggle="modal" data-target="#modalCarrito">+</button>
                             </div>
                         </article>
                         <article class="producto flex-col flex-center">
@@ -352,7 +353,7 @@
                                 <span class="producto__texto producto__precio"
                                     >$xxx.xx</span
                                 >
-                                <button class="button-submit">+</button>
+                                <button class="button-submit" data-toggle="modal" data-target="#modalCarrito">+</button>
                             </div>
                         </article>
 
@@ -368,7 +369,7 @@
                                 <span class="producto__texto producto__precio"
                                     >$xxx.xx</span
                                 >
-                                <button class="button-submit">+</button>
+                                <button class="button-submit" data-toggle="modal" data-target="#modalCarrito">+</button>
                             </div>
                         </article>
 
@@ -386,7 +387,7 @@
                                 <span class="producto__texto producto__precio"
                                     >$xxx.xx</span
                                 >
-                                <button class="button-submit">+</button>
+                                <button class="button-submit" data-toggle="modal" data-target="#modalCarrito">+</button>
                             </div>
                         </article>
 
@@ -404,7 +405,7 @@
                                 <span class="producto__texto producto__precio"
                                     >$xxx.xx</span
                                 >
-                                <button class="button-submit">+</button>
+                                <button class="button-submit" data-toggle="modal" data-target="#modalCarrito">+</button>
                             </div>
                         </article>
 
@@ -422,7 +423,7 @@
                                 <span class="producto__texto producto__precio"
                                     >$xxx.xx</span
                                 >
-                                <button class="button-submit">+</button>
+                                <button class="button-submit" data-toggle="modal" data-target="#modalCarrito">+</button>
                             </div>
                         </article>
 
@@ -438,7 +439,7 @@
                                 <span class="producto__texto producto__precio"
                                     >$xxx.xx</span
                                 >
-                                <button class="button-submit">+</button>
+                                <button class="button-submit" data-toggle="modal" data-target="#modalCarrito">+</button>
                             </div>
                         </article>
 
@@ -456,7 +457,7 @@
                                 <span class="producto__texto producto__precio"
                                     >$xxx.xx</span
                                 >
-                                <button class="button-submit">+</button>
+                                <button class="button-submit" data-toggle="modal" data-target="#modalCarrito">+</button>
                             </div>
                         </article>
 
@@ -474,7 +475,7 @@
                                 <span class="producto__texto producto__precio"
                                     >$xxx.xx</span
                                 >
-                                <button class="button-submit">+</button>
+                                <button class="button-submit" data-toggle="modal" data-target="#modalCarrito">+</button>
                             </div>
                         </article>
                     </section>
@@ -534,5 +535,24 @@
                 </div>
             </div>
         </footer>
+
+        <div class="modal fade" id="modalCarrito" tabindex="-1" role="dialog" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Carrito</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Elemento añadido al carrito!</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  </div>
+              </div>
+            </div>
+          </div>
     </body>
 </html>
