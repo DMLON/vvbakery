@@ -22,40 +22,58 @@
 
     <body>
         <header>
-            <!-- Imagen con Logo -->
-            <div class="left-header">
-                <a href="index.html">
+            <nav class="navbar navbar-expand-xl navbar-dark">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
                     <img
                         src="./media/Fondo Red VelvetMini.png"
                         alt="Vivi Velvet Bakery Logo"
+                        style="width:40px;"
                     />
+                    Vivi Velvet Bakery
                 </a>
-                <h2 id="nombre-logo"><i>Vivi Velvet Bakery</i></h2>
-                <input size="50" placeholder="🔎 ¿Que vas a merendar hoy?" />
-            </div>
-            <div class="right-header flex-row flex-center">
-                <div id="nav-bar" class="topnav">
-                    <a class="first-item" href="index.html">Home</a>
-                    <a href="quienes.html">Quienes somos</a>
-                    <a class="active" href="contacto.html">Contacto</a>
-                    <a href="login.html">Acceder</a>
-                    <a href="./admin/admin-dashboard.html">Admin</a>
-                    <a class="nav-icon" onclick="openNavBar()">
-                        <i class="fa fa-bars"></i>
-                    </a>
+
+                <!-- Boton para colapsar -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quienes.html">Quienes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Acceder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./admin/admin-dashboard.html">Admin</a>
+                        </li>
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="🔎 ¿Que vas a merendar?">
+                    </form>
+
+                    <div class="carrito-group">
+                        <a href="carrito.html">
+                            <div class="product-numbers">
+                                <span>2 Productos</span>
+                                <span>$xxx.xx</span>
+                            </div>
+                            <img id="logo-carrito" src="./media/Carrito.png" />
+                        </a>
+                    </div>
                 </div>
-                <div class="carrito-group">
-                    <a href="carrito.html">
-                        <!-- Carrito -->
-                        <div class="product-numbers">
-                            <span>2 Productos</span>
-                            <span>$xxx.xx</span>
-                        </div>
-                        <!-- El carrito tiene link hacia la pagina del carrito -->
-                        <img id="logo-carrito" src="./media/Carrito.png" />
-                    </a>
-                </div>
-            </div>
+            </nav>
         </header>
 
         <main class="main">

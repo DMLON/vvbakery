@@ -18,50 +18,50 @@
 //
 // Import all of Bootstrap's CSS
 
-// @import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 // Option 2
 //
 // Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
 
-@import "bootstrap/scss/functions"; // Required
-@import "bootstrap/scss/variables"; // Required
-@import "bootstrap/scss/mixins"; // Required
+// @import "bootstrap/scss/functions"; // Required
+// @import "bootstrap/scss/variables"; // Required
+// @import "bootstrap/scss/mixins"; // Required
 
-@import "bootstrap/scss/root"; // Required
-@import "bootstrap/scss/reboot"; // Required
-@import "bootstrap/scss/type";
-// @import "bootstrap/scss/images";
-// @import "bootstrap/scss/code";
-@import "bootstrap/scss/grid";
-// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/root"; // Required
+// @import "bootstrap/scss/reboot"; // Required
+// @import "bootstrap/scss/type";
+// // @import "bootstrap/scss/images";
+// // @import "bootstrap/scss/code";
+// @import "bootstrap/scss/grid";
+// // @import "bootstrap/scss/tables";
 // @import "bootstrap/scss/forms";
-@import "bootstrap/scss/buttons";
-@import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/buttons";
+// @import "bootstrap/scss/transitions";
 // @import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
 // @import "bootstrap/scss/input-group"; // Requires forms
-// @import "bootstrap/scss/custom-forms";
+// // @import "bootstrap/scss/custom-forms";
 // @import "bootstrap/scss/nav";
 // @import "bootstrap/scss/navbar"; // Requires nav
-// @import "bootstrap/scss/card";
-// @import "bootstrap/scss/breadcrumb";
-// @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
-// @import "bootstrap/scss/jumbotron";
-// @import "bootstrap/scss/alert";
-// @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/media";
-// @import "bootstrap/scss/list-group";
-@import "bootstrap/scss/close";
-// @import "bootstrap/scss/toasts";
-@import "bootstrap/scss/modal"; // Requires transitions
-// @import "bootstrap/scss/tooltip";
-// @import "bootstrap/scss/popover";
-@import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/spinners";
-@import "bootstrap/scss/utilities";
-// @import "bootstrap/scss/print";
+// // @import "bootstrap/scss/card";
+// // @import "bootstrap/scss/breadcrumb";
+// // @import "bootstrap/scss/pagination";
+// // @import "bootstrap/scss/badge";
+// // @import "bootstrap/scss/jumbotron";
+// // @import "bootstrap/scss/alert";
+// // @import "bootstrap/scss/progress";
+// // @import "bootstrap/scss/media";
+// // @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/close";
+// // @import "bootstrap/scss/toasts";
+// @import "bootstrap/scss/modal"; // Requires transitions
+// // @import "bootstrap/scss/tooltip";
+// // @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// // @import "bootstrap/scss/spinners";
+// @import "bootstrap/scss/utilities";
+// // @import "bootstrap/scss/print";
 
 
 //
@@ -82,6 +82,7 @@ $btn-modificar-background: #f39c12;
 html {
     position: relative;
     min-height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -100,8 +101,7 @@ a:active {
 
 header {
     background-color: $back-footer-header;
-    color: white;
-    padding: 5px;
+    // color: white;
     overflow: hidden;
 }
 
@@ -208,8 +208,8 @@ header {
 
 .carrito-group {
     vertical-align: top;
-    padding: 10px;
-    padding-bottom: 5px;
+    // padding: 10px;
+    // padding-bottom: 5px;
     display: inline-block;
     box-sizing: content-box;
     #logo-carrito {
@@ -273,7 +273,7 @@ footer {
 @mixin social-buttons($img-url) {
     background: $back-social-buttons url($img-url);
     background-size: 27px;
-    background-position: 2px 2px;
+    background-position: 4px 4px;
     background-repeat: no-repeat;
 }
 
@@ -291,7 +291,7 @@ footer {
 }
 
 #facebook-button {
-    @include social-buttons("../../media/logo_facebook.png")
+    @include social-buttons("../../media/logo_facebook.jpg")
 }
 
 .tarjetas-envio {

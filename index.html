@@ -39,45 +39,74 @@
                     x.className = "topnav";
                 }
             }
+
+            /* Set the width of the sidebar to 250px (show it) */
+            function openNav() {
+                document.getElementById("side-panel-filtros").style.width = "250px";
+            }
+
+            /* Set the width of the sidebar to 0 (hide it) */
+            function closeNav() {
+                document.getElementById("side-panel-filtros").style.width = "0";
+            }
         </script>
     </head>
 
+
     <body>
         <header>
-            <!-- Imagen con Logo -->
-            <div class="left-header">
-                <a href="index.html">
+            <nav class="navbar navbar-expand-xl navbar-dark">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
                     <img
                         src="./media/Fondo Red VelvetMini.png"
                         alt="Vivi Velvet Bakery Logo"
+                        style="width:40px;"
                     />
+                    Vivi Velvet Bakery
                 </a>
-                <h2 id="nombre-logo"><i>Vivi Velvet Bakery</i></h2>
-                <input size="50" placeholder="🔎 ¿Que vas a merendar hoy?" />
-            </div>
-            <div class="right-header flex-row flex-center">
-                <div id="nav-bar" class="topnav">
-                    <a class="active first-item" href="index.html">Home</a>
-                    <a href="quienes.html">Quienes somos</a>
-                    <a href="contacto.html">Contacto</a>
-                    <a href="login.html">Acceder</a>
-                    <a href="./admin/admin-dashboard.html">Admin</a>
-                    <a class="nav-icon" onclick="openNavBar()">
-                        <i class="fa fa-bars"></i>
-                    </a>
+
+                <!-- Boton para colapsar -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quienes.html">Quienes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Acceder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./admin/admin-dashboard.html">Admin</a>
+                        </li>
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="🔎 ¿Que vas a merendar?">
+                    </form>
+
+                    <div class="carrito-group">
+                        <a href="carrito.html">
+                            <div class="product-numbers">
+                                <span>2 Productos</span>
+                                <span>$xxx.xx</span>
+                            </div>
+                            <img id="logo-carrito" src="./media/Carrito.png" />
+                        </a>
+                    </div>
                 </div>
-                <div class="carrito-group">
-                    <a href="carrito.html">
-                        <!-- Carrito -->
-                        <div class="product-numbers">
-                            <span>2 Productos</span>
-                            <span>$xxx.xx</span>
-                        </div>
-                        <!-- El carrito tiene link hacia la pagina del carrito -->
-                        <img id="logo-carrito" src="./media/Carrito.png" />
-                    </a>
-                </div>
-            </div>
+            </nav>
         </header>
 
         <main>
@@ -120,137 +149,135 @@
             </div>
             <section class="main-index flex-row">
                 <aside class="side-panel">
-                    <div>
-                        <h2 class="side-panel__head">Filtros</h2>
-                        <ul class="clean-list">
-                            <li>
-                                <input id="dulce" type="checkbox" />
-                                <label class="checkbox block" for="dulce">
-                                    Dulces
-                                </label>
-                                <ul class="clean-list">
-                                    <li>
-                                        <input
-                                            id="dulce_galletitas"
-                                            type="checkbox"
-                                        />
-                                        <label
-                                            class="checkbox block"
-                                            for="dulce_galletitas"
-                                        >
-                                            Galletitas
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input
-                                            id="dulce_tortas"
-                                            type="checkbox"
-                                        />
-                                        <label
-                                            class="checkbox block"
-                                            for="dulce_tortas"
-                                        >
-                                            Tortas
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input
-                                            id="dulce_tartas"
-                                            type="checkbox"
-                                        />
-                                        <label
-                                            class="checkbox block"
-                                            for="dulce_tartas"
-                                        >
-                                            Tartas
-                                        </label>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <input id="salado" type="checkbox" />
-                                <label class="checkbox block" for="salado">
-                                    Salados
-                                </label>
-                                <ul class="clean-list">
-                                    <li>
-                                        <input
-                                            id="salado_galletitas"
-                                            type="checkbox"
-                                        />
-                                        <label
-                                            class="checkbox block"
-                                            for="salado_galletitas"
-                                        >
-                                            Galletitas
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input
-                                            id="salado_panes"
-                                            type="checkbox"
-                                        />
-                                        <label
-                                            class="checkbox block"
-                                            for="salado_panes"
-                                        >
-                                            Panes
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input
-                                            id="salado_sanguchitos"
-                                            type="checkbox"
-                                        />
-                                        <label
-                                            class="checkbox block"
-                                            for="salado_sanguchitos"
-                                        >
-                                            Sanguchitos
-                                        </label>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <input id="promociones" type="checkbox" />
-                                <label class="checkbox block" for="promociones">
-                                    Promociones
-                                </label>
-                                <ul class="clean-list">
-                                    <li>
-                                        <input
-                                            id="promociones_combos"
-                                            type="checkbox"
-                                        />
-                                        <label
-                                            class="checkbox block"
-                                            for="promociones_combos"
-                                        >
-                                            Combos
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input
-                                            id="promociones_eventos"
-                                            type="checkbox"
-                                        />
-                                        <label
-                                            class="checkbox block"
-                                            for="promociones_eventos"
-                                        >
-                                            Eventos
-                                        </label>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <input id="especiales" type="checkbox" />
-                                <label class="checkbox block" for="especiales">
-                                    Especiales
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
+                    <h2 class="side-panel__head">Filtros</h2>
+                    <ul class="clean-list">
+                        <li>
+                            <input id="dulce" type="checkbox" />
+                            <label class="checkbox block" for="dulce">
+                                Dulces
+                            </label>
+                            <ul class="clean-list">
+                                <li>
+                                    <input
+                                        id="dulce_galletitas"
+                                        type="checkbox"
+                                    />
+                                    <label
+                                        class="checkbox block"
+                                        for="dulce_galletitas"
+                                    >
+                                        Galletitas
+                                    </label>
+                                </li>
+                                <li>
+                                    <input
+                                        id="dulce_tortas"
+                                        type="checkbox"
+                                    />
+                                    <label
+                                        class="checkbox block"
+                                        for="dulce_tortas"
+                                    >
+                                        Tortas
+                                    </label>
+                                </li>
+                                <li>
+                                    <input
+                                        id="dulce_tartas"
+                                        type="checkbox"
+                                    />
+                                    <label
+                                        class="checkbox block"
+                                        for="dulce_tartas"
+                                    >
+                                        Tartas
+                                    </label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input id="salado" type="checkbox" />
+                            <label class="checkbox block" for="salado">
+                                Salados
+                            </label>
+                            <ul class="clean-list">
+                                <li>
+                                    <input
+                                        id="salado_galletitas"
+                                        type="checkbox"
+                                    />
+                                    <label
+                                        class="checkbox block"
+                                        for="salado_galletitas"
+                                    >
+                                        Galletitas
+                                    </label>
+                                </li>
+                                <li>
+                                    <input
+                                        id="salado_panes"
+                                        type="checkbox"
+                                    />
+                                    <label
+                                        class="checkbox block"
+                                        for="salado_panes"
+                                    >
+                                        Panes
+                                    </label>
+                                </li>
+                                <li>
+                                    <input
+                                        id="salado_sanguchitos"
+                                        type="checkbox"
+                                    />
+                                    <label
+                                        class="checkbox block"
+                                        for="salado_sanguchitos"
+                                    >
+                                        Sanguchitos
+                                    </label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input id="promociones" type="checkbox" />
+                            <label class="checkbox block" for="promociones">
+                                Promociones
+                            </label>
+                            <ul class="clean-list">
+                                <li>
+                                    <input
+                                        id="promociones_combos"
+                                        type="checkbox"
+                                    />
+                                    <label
+                                        class="checkbox block"
+                                        for="promociones_combos"
+                                    >
+                                        Combos
+                                    </label>
+                                </li>
+                                <li>
+                                    <input
+                                        id="promociones_eventos"
+                                        type="checkbox"
+                                    />
+                                    <label
+                                        class="checkbox block"
+                                        for="promociones_eventos"
+                                    >
+                                        Eventos
+                                    </label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input id="especiales" type="checkbox" />
+                            <label class="checkbox block" for="especiales">
+                                Especiales
+                            </label>
+                        </li>
+                    </ul>
                 </aside>
 
                 <section class="main-panel flex-col">
