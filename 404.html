@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Vivi Velvet Bakery</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <script type="module" src="./assets/js/starter.js"></script>
+        <script>
+            function openNavBar() {
+                var x = document.getElementById("nav-bar");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-xl navbar-dark">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img
+                        src="./media/Fondo Red VelvetMini.png"
+                        alt="Vivi Velvet Bakery Logo"
+                        style="width:40px;"
+                    />
+                    Vivi Velvet Bakery
+                </a>
+
+                <!-- Boton para colapsar -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="quienes.html">Quienes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Acceder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./admin/admin-dashboard.html">Admin</a>
+                        </li>
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="🔎 ¿Que vas a merendar?">
+                    </form>
+
+                    <div class="carrito-group">
+                        <a href="carrito.html">
+                            <div class="product-numbers">
+                                <span>2 Productos</span>
+                                <span>$xxx.xx</span>
+                            </div>
+                            <img id="logo-carrito" src="./media/Carrito.png" />
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <!-- Testeo de height a mano con view height para que ocupe todo -->
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <img
+                            class="col-md-12"
+                            src="./media/404Cake.png"
+                            alt="Cake error 404"
+                        />
+                    </div>
+                    <div class="col-md-6 align-self-center">
+                        <h1 class="h1-404">404</h1>
+                        <h2 class="h2-404">Parece que estás perdido!</h2>
+                        <p> La página que estabas intentando buscar no se encuentra
+                            Pulsa el boton de abajo para volver a la pantalla principal
+                        </p>
+                        <button class="btn btn-success">HOME</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="tarjetas-envio">
+                    <!-- Tarjetas y envio -->
+                    <div class="center-scale-text-image">
+                        <b>Aceptamos tarjetas y mercado pago</b>
+                        <img src="./media/logo_mastervisa.png" width="75px" />
+                        <img src="./media/logo_mercadoPago.png" width="75px" />
+                    </div>
+                    <div class="center-scale-text-image">
+                        <b>Envios gratis desde $xxxx.xx</b>
+                        <!-- El helper permite que se centre el camion -->
+                        <div class="helper">
+                            <img src="./media/logo_delivery.png" />
+                        </div>
+                    </div>
+                    <span id="copyright"
+                        >Copyright © 2020-2021 <em>Vivi Velvet Bakery</em></span
+                    >
+                </div>
+                <div class="social">
+                    <!-- News y redes -->
+                    <div class="center-scale-text-image news-redes">
+                        <!-- Redes sociales -->
+                        <span>No te pierdas las últimas novedades!</span>
+                        <a href="https://www.twitter.com/vivivelvetbakery/" target="_blank"></a>
+                            <button class="social-button" id="twitter-button">
+                                Twitter
+                            </button>
+                        </a>
+                        <a href="https://www.facebook.com/vivivelvetbakery/" target="_blank"></a>
+                            <button class="social-button" id="facebook-button">
+                                Facebook
+                            </button>
+                        </a>
+                        <a href="https://www.instagram.com/vivivelvetbakery/" target="_blank">
+                            <button class="social-button" id="instagram-button">
+                                Instagram
+                            </button>
+                        </a>
+                    </div>
+                    <div class="center-scale-text-image" id="newsletter">
+                        <!-- Newsletter -->
+                        <span>Suscribite a nuestro newsletter</span>
+                        <input size="30" placeholder="🗞️ Ingresa tu mail" />
+                        <button>Suscribirse</button>
+                    </div>
+                    <div id="legales" class="center-scale-text-image">
+                        <!-- Legales -->
+                        <a href="#">Terminos y servicios</a>
+                        |
+                        <a href="#">Politica de privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

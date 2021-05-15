@@ -291,7 +291,7 @@ footer {
 }
 
 #facebook-button {
-    @include social-buttons("../../media/logo_facebook.jpg")
+    @include social-buttons("../../media/logo_facebook.png")
 }
 
 .tarjetas-envio {
@@ -882,3 +882,17 @@ footer {
 }
 
 /* #endregion ---- Admin ---- */
+
+/* #region ---- 404 ---- */
+
+.h1-404 {
+    font-size: 7.5em;
+    margin: 15px 0px;
+    font-weight: bold;
+}
+
+.h2-404 {
+    font-size: 2em;
+    font-weight: bold;
+}
+/* #endregion ---- 404 ---- */
